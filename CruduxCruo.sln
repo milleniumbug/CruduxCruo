@@ -3,13 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.26124.0
 MinimumVisualStudioVersion = 15.0.26124.0
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CruduxCruo.Agnostic", "CruduxCruo.Agnostic\CruduxCruo.Agnostic.csproj", "{7BC9B8BE-C759-4638-84FB-175D214070B4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CruduxCruo.Agnostic", "CruduxCruo.Agnostic\CruduxCruo.Agnostic.csproj", "{7BC9B8BE-C759-4638-84FB-175D214070B4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CruduxCruo.Agnostic.Tests", "CruduxCruo.Agnostic.Tests\CruduxCruo.Agnostic.Tests.csproj", "{C5CAF11A-E6B6-4B10-89BF-25CF0D192FA7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CruduxCruo.Agnostic.Tests", "CruduxCruo.Agnostic.Tests\CruduxCruo.Agnostic.Tests.csproj", "{C5CAF11A-E6B6-4B10-89BF-25CF0D192FA7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CruduxCruo.SQLite.Tests", "CruduxCruo.SQLite.Tests\CruduxCruo.SQLite.Tests.csproj", "{333757B8-CB45-4975-B106-8EE5C3DD4527}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CruduxCruo.SQLite.Tests", "CruduxCruo.SQLite.Tests\CruduxCruo.SQLite.Tests.csproj", "{333757B8-CB45-4975-B106-8EE5C3DD4527}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CruduxCruo.WPF.Tests", "CruduxCruo.WPF.Tests\CruduxCruo.WPF.Tests.csproj", "{69894CC3-96F1-4288-9418-8E521002E1C0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CruduxCruo.WPF.Tests", "CruduxCruo.WPF.Tests\CruduxCruo.WPF.Tests.csproj", "{69894CC3-96F1-4288-9418-8E521002E1C0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CruduxCruo.WPF", "CruduxCruo.WPF\CruduxCruo.WPF.csproj", "{A0833DA7-2C12-42DA-8FBC-9D97D4F8C19B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -19,9 +21,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 		Release|x64 = Release|x64
 		Release|x86 = Release|x86
-	EndGlobalSection
-	GlobalSection(SolutionProperties) = preSolution
-		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{7BC9B8BE-C759-4638-84FB-175D214070B4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
@@ -72,5 +71,23 @@ Global
 		{69894CC3-96F1-4288-9418-8E521002E1C0}.Release|x64.Build.0 = Release|Any CPU
 		{69894CC3-96F1-4288-9418-8E521002E1C0}.Release|x86.ActiveCfg = Release|Any CPU
 		{69894CC3-96F1-4288-9418-8E521002E1C0}.Release|x86.Build.0 = Release|Any CPU
+		{A0833DA7-2C12-42DA-8FBC-9D97D4F8C19B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A0833DA7-2C12-42DA-8FBC-9D97D4F8C19B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A0833DA7-2C12-42DA-8FBC-9D97D4F8C19B}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{A0833DA7-2C12-42DA-8FBC-9D97D4F8C19B}.Debug|x64.Build.0 = Debug|Any CPU
+		{A0833DA7-2C12-42DA-8FBC-9D97D4F8C19B}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{A0833DA7-2C12-42DA-8FBC-9D97D4F8C19B}.Debug|x86.Build.0 = Debug|Any CPU
+		{A0833DA7-2C12-42DA-8FBC-9D97D4F8C19B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A0833DA7-2C12-42DA-8FBC-9D97D4F8C19B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A0833DA7-2C12-42DA-8FBC-9D97D4F8C19B}.Release|x64.ActiveCfg = Release|Any CPU
+		{A0833DA7-2C12-42DA-8FBC-9D97D4F8C19B}.Release|x64.Build.0 = Release|Any CPU
+		{A0833DA7-2C12-42DA-8FBC-9D97D4F8C19B}.Release|x86.ActiveCfg = Release|Any CPU
+		{A0833DA7-2C12-42DA-8FBC-9D97D4F8C19B}.Release|x86.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {382CB3FE-634D-41C6-B6B9-B3D992900351}
 	EndGlobalSection
 EndGlobal
