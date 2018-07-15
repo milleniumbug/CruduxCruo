@@ -24,5 +24,16 @@ namespace CruduxCruo.WPF
         {
             InitializeComponent();
         }
+
+        public Type InstanceType
+        {
+            get { return (Type)GetValue(InstanceTypeProperty); }
+            set { SetValue(InstanceTypeProperty, value); }
+        }
+
+        public static readonly DependencyProperty InstanceTypeProperty =
+            DependencyProperty.Register("InstanceType", typeof(Type), typeof(DataCreatorBox), new PropertyMetadata());
+
+
     }
 }
