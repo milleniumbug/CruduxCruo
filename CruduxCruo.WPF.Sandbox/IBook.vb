@@ -7,6 +7,7 @@ Public MustInherit Class Book
     Inherits DataModel(Of Book)
 
     <Description("Book title")>
+    <UserFauxKey>
     Public MustOverride Property Title As String
 
     <Description("Book description")>
@@ -22,12 +23,18 @@ Public MustInherit Class Book
 
 End Class
 
-Public Interface IAuthor
-    Inherits IDataModel(Of IAuthor)
+Public MustInherit Class IAuthor
+    Inherits DataModel(Of IAuthor)
 
-    Property FirstName As String
+    <Description("First name")>
+    <UserFauxKey>
+    Public MustOverride Property FirstName As String
 
-    Property LastName As String
+    <Description("Last name")>
+    <UserFauxKey>
+    Public MustOverride Property LastName As String
 
-    Property 
-End Interface
+    ' only for demonstration purposes, please suggest a better example
+    <Description("Age")>
+    Public MustOverride Property Age As Integer
+End Class

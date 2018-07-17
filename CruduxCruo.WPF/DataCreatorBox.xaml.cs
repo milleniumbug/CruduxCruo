@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -32,8 +33,59 @@ namespace CruduxCruo.WPF
         }
 
         public static readonly DependencyProperty InstanceTypeProperty =
-            DependencyProperty.Register("InstanceType", typeof(Type), typeof(DataCreatorBox), new PropertyMetadata());
+            DependencyProperty.Register("InstanceType", typeof(Type), typeof(DataCreatorBox), new PropertyMetadata(null, OnInstanceTypeChanged));
 
+        private static void OnInstanceTypeChanged(DependencyObject d, DependencyPropertyChangedEventArgs e)
+        {
+            var self = (DataCreatorBox)d;
+            var newValue = (Type)e.NewValue;
+            var gridLengthConverter = new GridLengthConverter();
+            self.Properties.Children.Clear();
+            self.Properties.ColumnDefinitions.Add(new ColumnDefinition());
+            self.Properties.ColumnDefinitions.Add(new ColumnDefinition());
+            int currentRow = 0;
 
+            //var hasErrorProp = typeof(INotifyDataErrorInfo).GetProperty();
+            foreach (var property in newValue.GetProperties().Where(prop => prop.Name != nameof(INotifyDataErrorInfo.HasErrors)))
+            {
+                self.Properties.RowDefinitions.Add(new RowDefinition
+                {
+                    Height = length("Auto")
+                });
+                {
+                    var block = new TextBlock();
+                    block.Text = property.GetCustomAttributes(typeof(DescriptionAttribute), false)
+                        .OfType<DescriptionAttribute>()
+                        .SingleOrDefault()
+                        ?.Description ?? property.Name;
+                    self.Properties.Children.Add(block);
+                    Grid.SetColumn(block, 0);
+                    Grid.SetRow(block, currentRow);
+
+                }
+                currentRow++;
+            }
+            self.Properties.RowDefinitions.Add(new RowDefinition
+            {
+                Height = length("*")
+            });
+
+            GridLength length(string len)
+            {
+                return (GridLength)gridLengthConverter.ConvertFromString(len);
+            }
+        }
+
+        private static VanceStubbs factory
+
+        /*private static TypeDictionary<Func<UIElement>> UiFactory = new TypeDictionary<Func<UIElement>>
+        {
+
+        };*/
+
+        public object Create()
+        {
+            return null;
+        }
     }
 }
